@@ -1,0 +1,113 @@
+/* src/pages/Home.css */
+
+.home-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  color: #212529;
+  min-height: 100vh;
+
+  background-image: url('../assets/chess-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+}
+
+/* Overlay to dim background */
+.home-container::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+
+/* Hero and Section Headings */
+.home-container h1,
+.home-container h2,
+.home-container h3 {
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.text-gradient {
+  background: linear-gradient(45deg, #ffc107, #ff5722);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Paragraph Text */
+.home-container p,
+.lead {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #e0e0e0;
+}
+
+/* Embedded video/iframe styling */
+.home-container iframe,
+.home-container video {
+  max-width: 100%;
+  border-radius: 10px;
+  border: 3px solid #fff;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+}
+
+/* Buttons */
+.home-container .btn-primary {
+  background-color: #ffc107;
+  border-color: #ffc107;
+  color: #000;
+}
+
+.home-container .btn-primary:hover {
+  background-color: #e0a800;
+  border-color: #d39e00;
+}
+
+.btn-warning {
+  font-weight: 600;
+  transition: transform 0.2s ease;
+}
+.btn-warning:hover {
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(to right, #343a40, #1d1f20);
+  color: #ccc;
+  font-size: 0.95rem;
+  letter-spacing: 0.3px;
+}
+
+/* Carousel images */
+.carousel img {
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Text shadows */
+.text-shadow {
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.text-shadow-light {
+  text-shadow: 1px 1px 6px rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive fixes */
+@media (max-width: 576px) {
+  .home-container h1,
+  .home-container h2 {
+    font-size: 1.75rem;
+  }
+
+  .lead {
+    font-size: 1rem;
+  }
+}
